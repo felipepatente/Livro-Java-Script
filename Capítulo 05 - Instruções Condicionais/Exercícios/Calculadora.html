@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Menor Número</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	var num1 = parseInt(prompt("Digite o 1° Número: "));
+	var num2 = parseInt(prompt("Digite o 2° Número: "));
+	var operador = prompt("Digite o Operador: ");
+
+	var resultado = 0;
+
+	switch(operador){
+		case "1":
+			resultado = num1 + num2;
+			break;
+		case "2":
+			resultado = num1 - num2;
+			break;
+		case "3":
+			resultado = num1 * num2;
+			break;
+		case "4":
+			resultado = num1 / num2;
+			break;		
+	}
+
+	console.log(resultado);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Menor Número</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	var num1 = parseInt(prompt("Digite o 1° Número: "));
+	var num2 = parseInt(prompt("Digite o 2° Número: "));
+	var num3 = parseInt(prompt("Digite o 3° Número: "));
+
+
+	var menorNumero = num3;
+
+	if(num1 < num2 && num1 < num3){
+		menorNumero = num1;
+	}else if(num2 < num1 && num2 < num3){
+		menorNumero = num2;
+	}
+
+	alert(menorNumero);
+
+</script>
+</body>
+</html>

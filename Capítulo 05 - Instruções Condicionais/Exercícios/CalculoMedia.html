@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculo de Média</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	var nota1 = prompt("Digite a 1° nota: ");
+	var nota2 = prompt("Digite a 2° nota: ");
+	var nota3 = prompt("Digite a 3° nota: ");
+
+	var media = (parseFloat(nota1) + parseFloat(nota2) + parseFloat(nota3)) / 3;
+
+	var mensagemResultado = "APROVADO";
+
+	if(media < 3){
+		mensagemResultado = "REPROVADO";
+	}else if(media >= 3 && media < 7){
+		mensagemResultado = "EXAME";
+	}
+
+	document.write(mensagemResultado);
+
+</script>
+</body>
+</html>
