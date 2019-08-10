@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercicio</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	var desejaContinuar = "";
+	var somaPedido001 = "0";
+	var somaPedido002 = "0";
+	var somaPedido003 = "0";
+	var somaPedido004 = "0";
+	var somaPedido005 = "0";
+	var valorTotal = "0";
+
+	do{
+
+		var codigoPedido = prompt("Digite o código do pedido: ");
+		var qtdPedido = parseInt(prompt("Digite a quantidade para o código " + codigoPedido + ": "));
+
+		switch(codigoPedido){
+			case "001":
+				somaPedido001 = parseFloat(qtdPedido * 6.25);
+				break;
+			case "002":
+				somaPedido002 = parseFloat(qtdPedido * 6.75);
+				break;
+			case "003":
+				somaPedido003 = parseFloat(qtdPedido * 10.75);
+				break;
+			case "004":
+				somaPedido004 = parseFloat(qtdPedido * 11.75);
+				break;		
+			case "005":
+				somaPedido005 = parseFloat(qtdPedido * 13.50);
+				break;		
+		}
+
+		var valorParcial = parseInt(parseInt(somaPedido001) + parseInt(somaPedido002) + parseInt(somaPedido003) + parseInt(somaPedido004) + parseInt(somaPedido005));
+
+		valorTotal += valorParcial;
+
+		desejaContinuar = prompt("Deseja continuar(S/N): ");
+
+	}while(desejaContinuar == "S");
+
+	if(somaPedido001 != "0"){
+		document.write("Valor a ser pago para o pedido com o código 001: " + somaPedido001 + "<br>");
+	}
+
+	if(somaPedido002 != "0"){
+		document.write("Valor a ser pago para o pedido com o código 002: " + somaPedido002 + "<br>");
+	}
+
+	if(somaPedido003 != "0"){
+		document.write("Valor a ser pago para o pedido com o código 003: " + somaPedido003 + "<br>");
+	}
+
+	if(somaPedido004 != "0"){
+		document.write("Valor a ser pago para o pedido com o código 004: " + somaPedido004 + "<br>");
+	}
+
+	if(somaPedido005 != "0"){
+		document.write("Valor a ser pago para o pedido com o código 005: " + somaPedido005 + "<br>");	
+	}
+</script>
+</body>
+</html>
