@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exemplo</title>
+</head>
+<body>
+<p>Será  retornado uma string com os elementos separados por virgula</p>
+
+<script type="text/javascript">
+	
+	var motocicletas = ["Honda", "Yamaha", "Ducati", "Harley-Davidson", "kawasaki", "Suzuki"];
+	
+	//O primeiro parâmetro indica em que posição o novo elemento vai ficar, o segundo quantos elementos vão ser apagados e o terceiro é são os novos elementos
+	motocicletas.splice(2,0,"Piaggio", "Dafra");
+
+	document.write(motocicletas.toString());
+
+</script>
+
+</body>
+</html>
