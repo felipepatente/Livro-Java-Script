@@ -12,12 +12,20 @@
 		nome: "XL883N Iron 883",
 		cor: "preta",
 
-		getDetalhes: function () {
-			return this.marca + " " + this.nome;
+		showDetalhes: function () {
+			return (alert(this.marca + " " + this.nome));
+		},
+
+		showNome: function () {
+			return (alert(this.nome));
+		},
+
+		showCaracteristicas: function () {
+			return (alert(this.marca));
 		}
 	};
 
-	document.write(motocicletas.getDetalhes());
+	motocicletas.showDetalhes();
 </script>
 </body>
 </html>
