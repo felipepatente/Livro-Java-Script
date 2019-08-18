@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercícios</title>
+	<meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+	
+	var frutas = ["Maça", "Morango", "Banana", "Melão", "Mamão"];
+
+	//Remova os dois primeiros elementos do array
+	frutas.splice(0,2);
+
+	//Ordene o array em ordem alfabética
+	frutas.sort();
+
+	//Adicione novos elementos a partir da segunda pos~ição
+	frutas.splice(2,0,"Manga","Abacaxi");
+
+	//Mostre cada elemeto em uma linha utilizando o método write() e o loop for
+	
+	var x;
+
+	for(x = 0; x < frutas.length; x++){
+		document.write(frutas[x] + "<br>");
+	}
+
+</script>
+</body>
+</html>
