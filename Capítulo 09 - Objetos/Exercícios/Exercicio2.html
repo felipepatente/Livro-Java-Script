@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercício 2</title>
+	<meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+	
+	var aluno = {};
+
+	function Curso(nome_curso, disciplinas, qtd_anos) {
+		this.nome_curso = nome_curso;
+		this.disciplinas = disciplinas;
+		this.qtd_anos = qtd_anos
+	}
+
+	aluno["Felipe"] = new Curso("Banco de Dados","SQL Server","2,5");
+	aluno["Roberto"] = new Curso("TSI","Mobile","3");
+	aluno["Luciano"] = new Curso("Analise de Desenvolvimento","Web Service","4");
+
+	for(var element in aluno){
+		for(var propt in aluno[element]){
+			document.write(element + ": " + propt + " = " + aluno[element][propt] + "<br>");
+		}
+	}
+
+</script>
+</body>
+</html>
