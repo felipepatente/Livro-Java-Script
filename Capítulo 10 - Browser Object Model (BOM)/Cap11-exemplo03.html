@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exemplo</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	var dadosUser = {
+		navegador_nome: navigator.appName,
+		navegador_versao: navigator.appVersion,
+		navegador_plataforma: navigator.platform,
+		navegador_agent: navigator.product,
+		navegador_javascript: navigator.javaEnabled()
+	}
+
+	for(propriedade in dadosUser){
+		document.write(propriedade + ": " + dadosUser[propriedade] + "<br>");
+	}
+
+</script>
+</body>
+</html>
