@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercício 01</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+<p>Clique no botão para abrir uma nova janela</p>
+
+<button onclick="abrirJanela()">Abrir Janela</button>
+
+<button onclick="RedimensionarJanela()">Redimensionar Janela</button>
+
+<script type="text/javascript">
+	
+	var janela;
+
+	function abrirJanela() {		
+		janela = window.open("","_blank","width=500, height=400");
+	}
+
+	function RedimensionarJanela() {
+		janela.resizeTo(800,800);
+		janela.focus();
+	}
+
+</script>
+</body>
+</html>

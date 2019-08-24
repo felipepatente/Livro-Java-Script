@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exemplo</title>
+</head>
+<body>
+
+<p>Informações da tela do usuário</p>
+<p id="resultado"></p>
+
+<script type="text/javascript">
+	
+	var larguraTela = "Largura: " + screen.width + " pixel",
+		alturaTela = "Altura: " + screen.height + " pixel";
+
+	document.getElementById("resultado").innerHTML = larguraTela + "<br>" + alturaTela;
+
+</script>
+</body>
+</html>
