@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exemplo</title>
+</head>
+<body>
+
+<p>Clique no botão para abrir uma nova janela.</p>
+
+<button onclick="abrirJanela()">Nova Janela</button>
+<button onclick="redimensionarJanela()">Redimensionar Janela</button>
+
+<script type="text/javascript">
+	
+	var janela;
+
+	function abrirJanela() {
+		janela = window.open("","","width=300, height=300");
+	}
+
+	function redimensionarJanela() {
+		janela.resizeTo(200,200);
+		janela.focus();
+	}
+
+</script>
+</body>
+</html>
