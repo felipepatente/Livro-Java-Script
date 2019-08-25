@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exemplo</title>
+	<meta charset="utf-8">
+</head>
+<body>
+<p>Clique no botão para pegar o nome do atritubo</p>
+<p id="resultado"></p>
+
+<button onclick="pegarNome()">Clique aqui</button>
+
+<script type="text/javascript">
+	
+	function pegarNome() {
+		var paragrafo = document.getElementsByTagName("p")[1];
+		var botaoNome = paragrafo.attributes[0].name;
+		document.getElementById("resultado").innerHTML = botaoNome;
+	}
+
+</script>
+
+</body>
+</html>
