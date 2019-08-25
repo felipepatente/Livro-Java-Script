@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exemplo</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+<h1>Lista de material escolar</h1>
+<ul id="material">
+	<li>Caderno</li>
+	<li>Lápis</li>
+	<li>Borracha</li>
+</ul>
+
+<p class="exemplo">Preencha o campo com o texto a ser adicionado na lista e Clique no botão</p>
+<input type="text" name="txt-material" id="txt-material">
+<button onclick="pegarNome()">Clique aqui</button>
+
+<script type="text/javascript">
+	
+	function pegarNome() {
+		
+		//pegando o valor do campo preenchido
+		var valorCampo = document.getElementById("txt-material").value;
+
+		//criando o elemento
+		var novaLista = document.createElement("li");
+
+		//criando o texto
+		var txtConteudo = document.createTextNode(valorCampo);
+
+		//atribuindo o texto a nova lista
+		novaLista.appendChild(txtConteudo);
+
+		//adicionando a nova lista no DOM
+		document.getElementById("material").appendChild(novaLista);
+
+		//limpando a caixa de texto
+		document.getElementById("txt-material").value = "";
+
+	}
+
+</script>
+
+</body>
+</html>
