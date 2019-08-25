@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercício</title>
+	<meta charset="utf-8">
+
+	<style type="text/css">
+		
+		.content{
+			width: 400px;
+			border: solid 1px gray;
+			padding: 30px 40px;
+		}
+
+		label{
+			display: inline-block;
+			width: 150px;
+			text-align: right;
+			margin-right: 10px;
+		}
+
+		input[type=submit]{
+			width: 80px;
+			height: 30px;
+			display: block;
+			border: none;
+			background: gray;
+			color: white;
+		}
+
+		p{
+			width: 150px;
+			display: inline-block;
+			font-weight: bold;
+		}
+
+	</style>
+
+</head>
+<body>
+
+<h1>Cálculo total de aulas</h1>
+
+<label><strong>Nome</strong></label>
+<input type="text" name="nome" id="nome"><br>
+
+<label><strong>Valor HORA/AULA</strong></label>
+<input type="text" name="valor" id="valor"><br>
+
+<label><strong>Total H/A semanal</strong></label>
+<input type="text" name="horas" id="horas"><br>
+
+<label><strong>Total Geral</strong></label>
+<p id="total"></p>
+
+<button onclick="calcular()">Calcular</button>
+
+<script type="text/javascript">
+	
+	function calcular() {
+		var nome = document.getElementById("nome").value;
+		var valorHora = document.getElementById("valor").value;
+		var qtdHoras = document.getElementById("horas").value;
+
+		var texto = nome + " recebeu esta semana " + (valorHora * qtdHoras);
+
+		document.getElementById("total").innerHTML = texto;
+	}
+
+</script>
+
+</body>
+</html>
