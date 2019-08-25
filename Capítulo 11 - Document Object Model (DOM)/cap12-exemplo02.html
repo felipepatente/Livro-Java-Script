@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exemplo</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+<p class="exemplo">Primeiro elemento com a classe exemplo</p>
+<p class="exemplo">Segundo elemento com a classe exemplo</p>
+
+<button onclick="mudarConteudo()">Clique aqui</button>
+
+<script type="text/javascript">
+	
+	function mudarConteudo() {
+		
+		var txt = document.getElementsByClassName("exemplo"),
+			x;
+
+		for (var x = 0; x < txt.length; x++) {
+			
+			if(x == 0){
+				txt[0].innerHTML = "Olá Mundo";
+			}else if(x ==1){
+				txt[1].innerHTML = "Olá javascript";
+			}
+
+		}
+	}
+
+</script>
+
+</body>
+</html>
