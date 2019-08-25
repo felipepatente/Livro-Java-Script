@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exemplo</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+<h1>Lista de material escolar</h1>
+<ul id="material">
+	<li>Caderno</li>
+	<li>Lápis</li>
+	<li>Borracha</li>
+</ul>
+
+<button onclick="removerElemento()">Clique aqui</button>
+
+<script type="text/javascript">
+	
+	function removerElemento() {
+		var lista = document.getElementById("material");
+		lista.removeChild(lista.childNodes[0]);
+	}
+
+</script>
+
+</body>
+</html>
