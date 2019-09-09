@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercício 01</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+<button onmouseover="MudarTextoMouseOver()" onmouseout="MudarTextoMouseOut()">Passe o mouse por mim</button>
+<p id="resultado">Sem movimentos por enquanto</p>
+
+<script type="text/javascript">
+	
+	function MudarTextoMouseOver() {
+		var mensagem = document.getElementById("resultado");
+		mensagem.innerHTML = "Estou com o ponteiro do mouse sobre o botão";
+	}
+
+	function MudarTextoMouseOut() {
+		document.getElementById("resultado").innerHTML = "Estou saindo fora do botão";
+	}
+
+</script>
+
+</body>
+</html>
