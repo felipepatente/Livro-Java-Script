@@ -28,11 +28,33 @@ function cancela_evento(evento) {
 	}
 }
 
+//Função que verifica os campos radio e checkbox
+function verificaCampos(campo) {
+	
+	//variável que verifica os radios
+	var checados = false;
+	//verifica os radios
+	for(var i = 0; i < campo.length; i++){
+		if(campo[i].checked){
+			checados = true;
+		}
+	}
+
+	if(!checados){
+		alert("Marque o campo " + campo[0].name);
+		cancela_evento(evento);
+		return false;
+	}
+
+}
+
 function formValid(event) {
 	
-	//pega os campos text e select
+	//pega os campos text, select, radio e checkbox
 	var campoNome = formE1.txtname.value,
-		campoCidade = formE1.cidades;	
+		campoCidade = formE1.cidades,
+		campoRadios = formE1.sexo,
+		campoCheckbox = formE1.rede;	
 
 	//Verifica campo de texto
 	if(campoNome.length == 0){
@@ -52,6 +74,12 @@ function formValid(event) {
 
 	}
 
+	//Chama a função verificaCampos para o radio
+	verificaCampos(campoRadios);
+
+	//Chama a função verificaCampos para o checkbox
+	verificaCampos(campoCheckbox);
+	
 	alert("O Formulário será enviado");
 	return true;
 }
