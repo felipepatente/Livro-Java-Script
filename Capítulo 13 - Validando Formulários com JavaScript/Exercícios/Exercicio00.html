@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercício</title>
+	<meta charset="utf-8">
+
+	<style type="text/css">
+		form{
+			width: 500px;
+			margin: 20px auto;
+		}
+
+		fieldset{
+			padding: 30px;
+			border: solid 2px gray;
+		}
+
+		legend{
+			font-size: 24px;
+		}
+
+		label{
+			width: 100px;
+			display: inline-block;
+			text-align: right;
+			padding-right: 10px;
+		}
+
+		input[type=text]{
+			width: 314px;
+			height: 30px;
+		}
+
+		input[type=submit]{
+			width: 150px;
+			height: 30px;
+			float: right;
+		}
+
+	</style>
+
+</head>
+<body>
+
+<form action="#" id="meuForm">
+	<fieldset>
+		<legend>Exemplo básico de formulário</legend>
+
+		<p>
+			<label>login*</label>
+			<input id="textbox1" type="text" name="txtLogin">
+		</p>
+
+		<p>
+			<label>Senha*</label>
+			<input id="textbox2" type="password" name="txtSenha">
+		</p>
+
+		<p><input type="submit" id="botaosub" value="Enviar"></p>
+	</fieldset>
+</form>
+
+<script type="text/javascript" src="validacao_form.js"></script>
+
+</body>
+</html>
