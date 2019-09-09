@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exemplo</title>
+	<meta charset="utf-8">
+
+	<style type="text/css">
+		div{
+			width: 250px;
+			height: 150px;
+			border: 2px solid darkgray;
+			margin: 10px;
+			float: left;
+			padding: 30px;
+			text-align: center;
+			background-color: lightblue;
+			font-size: 24px;
+		}
+
+		p{
+			background-color: white;
+			padding: 10px;
+		}
+
+		button{
+			display: block;
+			margin-left: 10px;
+		}
+
+	</style>
+</head>
+<body>
+
+<p>Clique no botão para remover o evento</p>
+<button id="meuBotao">Clique aqui!</button>
+
+<div id="area">
+	<p>mousemove: <br> <span id="resultado">Movimento do mouse</span></p>
+</div>
+
+<script type="text/javascript">
+	
+	var area = document.getElementById("area"),
+		botao = document.getElementById("meuBotao");
+
+	//Verificação para todos os navegadores
+	if(area.attachEvent){
+		area.attachEvent("onmousemove",moveMouse);
+		botao.detachEvent("click",removeEvento)
+	}else if(area.addEventListener){
+		area.addEventListener("mousemove",moveMouse, true);
+		botao.addEventListener("click", removeEvento, true);
+	}
+	
+	function moveMouse(evento) {
+		var x = evento.x,
+			y = evento.y;
+
+		document.getElementById("resultado").innerHTML = "x: " + x + " y: " + y;
+	}
+
+	function removeEvento() {
+		area.removeEventListener("mousemove",moveMouse, true);		
+	}
+
+</script>
+
+</body>
+</html>
