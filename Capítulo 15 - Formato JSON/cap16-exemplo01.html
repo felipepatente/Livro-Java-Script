@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exemplo</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h1>Criando um objeto JSON</h1>
+	<div id="resultado"></div>
+
+	<script type="text/javascript">
+		var txtPessoas = '{"pessoas": [{"primeiroNome":"Daniela","sobrenome":"Reis"},{"primeiroNome":"Gabriela","sobrenome":"Lima"},{"primeiroNome":"Nathalia","sobrenome":"Lima"}]}';
+
+		objRes = JSON.parse(txtPessoas);
+		console.log(objRes);
+
+		document.getElementById("resultado").innerHTML = objRes.pessoas[0].primeiroNome + " " + objRes.pessoas[0].sobrenome;
+	</script>
+</body>
+</html>
