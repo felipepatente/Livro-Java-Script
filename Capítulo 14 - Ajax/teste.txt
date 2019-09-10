@@ -1,0 +1,1 @@
+Ajax em inglês significa Asynchronous JavaScript and XML e em português: JavaScript Assincrono e XML

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exemplo</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+	<div id="resultado"><h2>Clique no botão para visualizar um informação</h2></div>
+	<button type="button" onclick="carregarDoc()">Mostrar Texto</button>
+
+	<script type="text/javascript">
+		function carregarDoc() {
+			var xmlhttp;
+
+			//navegadores em geral
+			if(window.XMLHttpRequest){
+				xmlhttp = new XMLHttpRequest();
+			}
+			//Navegadores IE6 e mais antigos
+			else{
+				xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+
+			document.getElementById("resultado").innerHTML = "Nada";
+
+			xmlhttp.onreadystatechange = function () {
+				if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+					document.getElementById("resultado").innerHTML = xmlhttp.responseText;					
+				}
+			}
+
+			xmlhttp.open("GET","teste.txt", true);
+			xmlhttp.send();
+
+		}
+	</script>
+
+</body>
+</html>
