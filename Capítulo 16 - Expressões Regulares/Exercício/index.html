@@ -3,8 +3,35 @@
 <head>
 	<title>Exercício</title>
 	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 </head>
 <body>
+
+<select class="form-control" id="cobMetodos">
+	<option value="">Escolha um dos métodos</option>
+	<option value="1">stringSearch()</option>
+	<option value="2">regexExec</option>
+	<option value="3">stringReplace()</option>
+	<option value="4">stringSplit()</option>
+	<option value="5">reagexTest()</option>	
+</select>
+
+<br>
+<p><input class="btn btn-primary" type="button" id="expressaoRegular" value="Ver Resultado"></p>
+
+<blockquote class="blockquote">
+  <p class="mb-0" id="stringOriginal"></p>
+</blockquote>
+
+<blockquote class="blockquote">
+  <p class="mb-0" id="expressaoUtilizada"></p>
+</blockquote>
+
+<blockquote class="blockquote">
+  <p class="mb-0" id="stringResultado"></p>
+</blockquote>
+
+<script type="text/javascript" src="js/ExpresaoRegular.js"></script>
 
 </body>
 </html>
