@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exemplos de Regex</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+<script type="text/javascript">
+		
+	var chamarFuncao = 5;
+	
+	qualFuncaoChamo()
+
+	function qualFuncaoChamo() {
+		
+		if(chamarFuncao == 1){
+			stringSearch();
+		}else if(chamarFuncao == 2){
+			regexpExec();
+		}else if(chamarFuncao == 3){
+			stringReplace();
+		}else if(chamarFuncao == 4){
+			stringSplit();
+		}else if(chamarFuncao == 5){
+			regexpTest();
+		}
+	}	
+
+	//As funções abaixo foi pega como referência do site da DevMedia: https://www.devmedia.com.br/expressoes-regulares-em-javascript/37015
+
+	//Busca por ao menos uma ocorrência da letra “j”, como mostra a expressão regular especificada, com o quantificador “+”. Assim, o valor retornado na variável n é 24, indicando o índice da letra “J” na string.
+	function stringSearch() {
+     	var str = "Expressões regulares em JavaScript! na DevMedia!";
+     	var n = str.search(/[j+]/i);
+     	alert(n);
+   	}
+
+   	//Faz o mesmo que o código de cima, só que com o RegExp
+   	function regexpExec() {
+	   	var str = "Expressões regulares em JavaScript na DevMedia!";
+	   	var regexp = new RegExp(/[j+]/i);
+	   	var n = regexp.exec(str);
+	   	alert(n);
+  	}
+
+  	//Troca todas as ocorrências de j por I
+  	function stringReplace() {
+     	var str = "Expressões regulares em JavaScript na DevMedia!";
+     	var n = str.replace(/[j]/ig, "I");
+     	alert(n);
+   	}
+
+   	//Mostra um array com os caracteres que são separados por espaços
+   	function stringSplit() {
+    	var str = "Expressões regulares em JavaScript na DevMedia!";
+    	var n = str.split(/[\t\s\n]/i);
+    	alert(n);
+  	}
+
+  	//traz true ou false
+  	function regexpTest() {
+        var str = "Expressões regulares em JavaScript na DevMedia!";
+        var regexp = new RegExp(/[j]/i);        
+        var n = regexp.test(str);
+        alert(n);
+    }
+
+</script>
+
+</body>
+</html>
